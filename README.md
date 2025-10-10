@@ -12,7 +12,20 @@ A modular FastAPI project designed to help organizations manage employees and th
 
 
 ---
+## 📚 Table of Contents
 
+- [📚 Project Description](#project-description)
+- [🎯 Objectives](#objectives)
+- [🔑 Core Features](#core-features)
+- [📁 Project Structure](#project-structure)
+- [📡 Live Demo](#live-demo)
+- [🚀 Getting Started](#getting-started)
+- [🔐 Authentication Example](#authentication-example)
+- [📝 License](#license)
+- [🙌 Author](#author)
+
+  ---
+  
 ## 📚 Project Description
 
 This API simulates a backend system for HR or project managers to:
