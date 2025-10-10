@@ -79,6 +79,10 @@ task_tracker/
     └── auth.py
 ```
 
+## 📡 Live Demo
+
+Check out the deployed API on Vercel:  
+🔗 [employee-task-tracker.vercel.app](https://employee-task-tracker-gfy4sufrd-niks-projects-20063e2f.vercel.app?_vercel_share=A0f9BFLCHHNf5Pbg1PXZUrd7gfRj9mm8)
 ---
 
 ## 🚀 Getting Started
