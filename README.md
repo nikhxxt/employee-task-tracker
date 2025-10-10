@@ -80,7 +80,7 @@ It uses **in-memory data storage** and showcases:
 ## 📁 Project Structure
 
 ```
-task_tracker/
+employee_task_tracker/
 ├── main.py
 ├── routers/
 │   ├── employees.py
