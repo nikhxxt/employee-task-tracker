@@ -10,8 +10,8 @@ A modular FastAPI project designed to help organizations manage employees and th
 ![GitHub Stars](https://img.shields.io/github/stars/nikhxxt/employee-task-tracker-?style=social)
 ![GitHub Forks](https://img.shields.io/github/forks/nikhxxt/employee-task-tracker-?style=social)
 
-
 ---
+
 ## 📚 Table of Contents
 
 - [📚 Project Description](#project-description)
@@ -24,8 +24,8 @@ A modular FastAPI project designed to help organizations manage employees and th
 - [📝 License](#license)
 - [🙌 Author](#author)
 
-  ---
-  
+---
+
 ## 📚 Project Description
 
 This API simulates a backend system for HR or project managers to:
@@ -88,14 +88,21 @@ task_tracker/
 ├── schemas/
 │   ├── employee_schema.py
 │   └── task_schema.py
-└── utils/
-    └── auth.py
+├── utils/
+│   └── auth.py
+├── requirements.txt
+├── vercel.json
+├── LICENSE
+└── README.md
 ```
+
+---
 
 ## 📡 Live Demo
 
 Check out the deployed API on Vercel:  
 🔗 [employee-task-tracker.vercel.app](https://employee-task-tracker-gfy4sufrd-niks-projects-20063e2f.vercel.app?_vercel_share=A0f9BFLCHHNf5Pbg1PXZUrd7gfRj9mm8)
+
 ---
 
 ## 🚀 Getting Started
@@ -103,8 +110,8 @@ Check out the deployed API on Vercel:
 ### Clone & Run Locally
 
 ```bash
-git clone https://github.com/nikhxxt/employee-task-tracker.git
-cd employee-task-tracker
+git clone https://github.com/nikhxxt/employee-task-tracker-.git
+cd employee-task-tracker-
 
 # Install dependencies
 pip install -r requirements.txt
@@ -135,9 +142,9 @@ This project is licensed under the **MIT License** — see [`LICENSE`](LICENSE).
 
 Created by [Malki Shaik Nikhat Naaz](https://github.com/nikhxxt)  
 Mini Project for G36 Python — Submitted to Bhargavesh Dakka  
+Due: **14 Oct** | Points: **100**
 
 ---
 
 © 2025 • Built with FastAPI for real-world backend mastery
 ```
-
