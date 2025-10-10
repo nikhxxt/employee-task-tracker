@@ -115,7 +115,7 @@ This project is licensed under the **MIT License** — see [`LICENSE`](LICENSE).
 
 ## 🙌 Author
 
-Created by [nikhxxt](https://github.com/nikhxxt)  
+Created by [nikhat](https://github.com/nikhxxt)  
 Mini Project for G36 Python — Submitted to Bhargavesh Dakka  
 Due: **14 Oct** | Points: **100**
 
