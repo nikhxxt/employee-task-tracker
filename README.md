@@ -6,9 +6,10 @@ A modular FastAPI project designed to help organizations manage employees and th
 ---
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
-![Repo Size](https://img.shields.io/github/repo-size/nikhxxt/employee-task-tracker)
-![GitHub Stars](https://img.shields.io/github/stars/nikhxxt/employee-task-tracker?style=social)
-![GitHub Forks](https://img.shields.io/github/forks/nikhxxt/employee-task-tracker?style=social)
+![Repo Size](https://img.shields.io/github/repo-size/nikhxxt/employee-task-tracker-)
+![GitHub Stars](https://img.shields.io/github/stars/nikhxxt/employee-task-tracker-?style=social)
+![GitHub Forks](https://img.shields.io/github/forks/nikhxxt/employee-task-tracker-?style=social)
+
 
 ---
 
