@@ -17,6 +17,7 @@ A modular FastAPI project designed to help organizations manage employees and th
 - [📚 Project Description](#project-description)
 - [🎯 Objectives](#objectives)
 - [🔑 Core Features](#core-features)
+- [🛠️ Tech Stack](#tech-stack)
 - [📁 Project Structure](#project-structure)
 - [📡 Live Demo](#live-demo)
 - [🚀 Getting Started](#getting-started)
@@ -74,6 +75,21 @@ It uses **in-memory data storage** and showcases:
 - Swagger UI: `/docs`  
 - ReDoc: `/redoc`  
 - Routes grouped with tags, summaries, and examples
+
+---
+
+
+## 🛠️ Tech Stack
+
+This project is built using modern backend technologies and tools:
+
+- **FastAPI** – High-performance Python framework for building APIs
+- **Pydantic** – Data validation and serialization using Python type hints
+- **Uvicorn** – ASGI server for running FastAPI apps
+- **Python 3.10+** – Language runtime with async support
+- **Swagger UI & ReDoc** – Auto-generated API documentation
+- **Vercel** – Cloud deployment platform for serverless hosting
+
 
 ---
 
@@ -138,13 +154,3 @@ This project is licensed under the **MIT License** — see [`LICENSE`](LICENSE).
 
 ---
 
-## 🙌 Author
-
-Created by [Malki Shaik Nikhat Naaz](https://github.com/nikhxxt)  
-Mini Project for G36 Python — Submitted to Bhargavesh Dakka  
-Due: **14 Oct** | Points: **100**
-
----
-
-© 2025 • Built with FastAPI for real-world backend mastery
-```
