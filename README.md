@@ -114,8 +114,8 @@ employee_task_tracker/
 
 ## 📡 Live Demo
 
-Check out the deployed API on Vercel:  
-🔗 [employee-task-tracker.vercel.app](https://employee-task-tracker-gfy4sufrd-niks-projects-20063e2f.vercel.app)
+Check out the deployed API:  
+🔗 [employee-task-tracker.app](https://insta-clone-api-eyqn.onrender.com)
 
 ---
 
