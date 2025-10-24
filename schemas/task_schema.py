@@ -1,11 +1,20 @@
 from pydantic import BaseModel
-from typing import Literal
+from typing import Optional
 
-class TaskCreate(BaseModel):
-    id: int
+class TaskBase(BaseModel):
     title: str
-    assigned_to: str
-    status: Literal["pending", "in_progress", "done"]
+    description: Optional[str] = None
+    status: str  # pending, in_progress, done
+    assigned_to: Optional[int] = None
 
-class Task(TaskCreate):
+class TaskCreate(TaskBase):
     pass
+
+class TaskUpdate(BaseModel):
+    title: Optional[str] = None
+    description: Optional[str] = None
+    status: Optional[str] = None
+    assigned_to: Optional[int] = None
+
+class Task(TaskBase):
+    id: int
