@@ -1,12 +1,13 @@
+# main.py
 from fastapi import FastAPI
 from routers import employees, tasks
 
-app = FastAPI(title="Employee Task Tracker API")
+app = FastAPI(
+    title="Employee Task Tracker API",
+    description="Manage employees and tasks with secure token-based access. Built with FastAPI.",
+    version="1.0.0"
+)
 
-@app.get("/")
-def read_root():
-    return {"message": "Welcome to the Employee Task Tracker API"}
-
-app.include_router(employees.router, tags=["Employees"])
-app.include_router(tasks.router, tags=["Tasks"])
-
+# Include routers
+app.include_router(employees.router)
+app.include_router(tasks.router)
