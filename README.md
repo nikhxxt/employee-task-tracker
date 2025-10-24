@@ -1,11 +1,11 @@
-
-# 🧑‍💼 Employee Task Tracker API
+e Task Tracker API
 
 A modular FastAPI project designed to help organizations manage employees and their assigned tasks efficiently. Built for hands-on learning, this mini project demonstrates real-world backend practices including routing, validation, authentication, and documentation.
 
 ---
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+![Render Status](https://img.shields.io/badge/Render-Live-blue)
 ![Repo Size](https://img.shields.io/github/repo-size/nikhxxt/employee-task-tracker)
 ![GitHub Stars](https://img.shields.io/github/stars/nikhxxt/employee-task-tracker?style=social)
 ![GitHub Forks](https://img.shields.io/github/forks/nikhxxt/employee-task-tracker?style=social)
@@ -23,7 +23,6 @@ A modular FastAPI project designed to help organizations manage employees and th
 - [🚀 Getting Started](#getting-started)
 - [🔐 Authentication Example](#authentication-example)
 - [📝 License](#license)
-
 
 ---
 
@@ -80,14 +79,12 @@ It uses **in-memory data storage** and showcases:
 
 ## 🛠️ Tech Stack
 
-This project is built using modern backend technologies and tools:
-
 - **FastAPI** – High-performance Python framework for building APIs  
 - **Pydantic** – Data validation and serialization using Python type hints  
 - **Uvicorn** – ASGI server for running FastAPI apps  
 - **Python 3.10+** – Language runtime with async support  
 - **Swagger UI & ReDoc** – Auto-generated API documentation  
-- **Vercel** – Cloud deployment platform for serverless hosting  
+- **Render** – Cloud platform for deploying web services  
 
 ---
 
@@ -105,7 +102,6 @@ employee_task_tracker/
 ├── utils/
 │   └── auth.py
 ├── requirements.txt
-├── vercel.json
 ├── LICENSE
 └── README.md
 ```
@@ -114,8 +110,10 @@ employee_task_tracker/
 
 ## 📡 Live Demo
 
-Check out the deployed API:  
-🔗 [employee-task-tracker.app](https://insta-clone-api-eyqn.onrender.com)
+Deployed on Render:  
+🔗 [https://employee-task-tracker.onrender.com](https://employee-task-tracker.onrender.com)
+
+> Note: Free Render services may take 30–60 seconds to wake up after inactivity.
 
 ---
 
@@ -149,6 +147,3 @@ x-token: work123
 ## 📝 License
 
 This project is licensed under the **MIT License** — see [`LICENSE`](LICENSE).
-
----
-
