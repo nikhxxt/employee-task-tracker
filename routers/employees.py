@@ -1,38 +1,45 @@
-from fastapi import APIRouter, HTTPException, Depends
-from schemas.employee_schema import Employee, EmployeeCreate
-from utils.auth import verify_token
+from fastapi import APIRouter, Depends, HTTPException
+from schemas.employee_schema import EmployeeCreate, EmployeeUpdate, Employee
+from utils.auth import token_auth
 
-router = APIRouter()
+router = APIRouter(prefix="/employees", tags=["Employees"])
+
 employees_db = {}
+employee_id_counter = 1
 
-@router.post("/employees", response_model=Employee)
-def create_employee(emp: EmployeeCreate, token: str = Depends(verify_token)):
-    if emp.email in employees_db:
-        raise HTTPException(status_code=400, detail="Employee already exists")
-    employees_db[emp.email] = emp
-    return emp
+@router.post("/", response_model=Employee, summary="Add a new employee")
+def create_employee(employee: EmployeeCreate, token: str = Depends(token_auth)):
+    global employee_id_counter
+    new_employee = employee.dict()
+    new_employee["id"] = employee_id_counter
+    employees_db[employee_id_counter] = new_employee
+    employee_id_counter += 1
+    return new_employee
 
-@router.get("/employees")
-def list_employees(token: str = Depends(verify_token)):
+@router.get("/", response_model=list[Employee], summary="Get all employees")
+def get_employees():
     return list(employees_db.values())
 
-@router.get("/employees/{email}", response_model=Employee)
-def get_employee(email: str, token: str = Depends(verify_token)):
-    emp = employees_db.get(email)
-    if not emp:
+@router.get("/{employee_id}", response_model=Employee, summary="Get employee by ID")
+def get_employee(employee_id: int):
+    employee = employees_db.get(employee_id)
+    if not employee:
         raise HTTPException(status_code=404, detail="Employee not found")
-    return emp
+    return employee
 
-@router.put("/employees/{email}", response_model=Employee)
-def update_employee(email: str, emp: EmployeeCreate, token: str = Depends(verify_token)):
-    if email not in employees_db:
+@router.put("/{employee_id}", response_model=Employee, summary="Update employee")
+def update_employee(employee_id: int, update: EmployeeUpdate, token: str = Depends(token_auth)):
+    employee = employees_db.get(employee_id)
+    if not employee:
         raise HTTPException(status_code=404, detail="Employee not found")
-    employees_db[email] = emp
-    return emp
+    update_data = update.dict(exclude_unset=True)
+    employee.update(update_data)
+    return employee
 
-@router.delete("/employees/{email}")
-def delete_employee(email: str, token: str = Depends(verify_token)):
-    if email in employees_db:
-        del employees_db[email]
-        return {"detail": "Deleted"}
-    raise HTTPException(status_code=404, detail="Employee not found")
+@router.delete("/{employee_id}", summary="Delete employee")
+def delete_employee(employee_id: int, token: str = Depends(token_auth)):
+    if employee_id not in employees_db:
+        raise HTTPException(status_code=404, detail="Employee not found")
+    del employees_db[employee_id]
+    return {"detail": "Employee deleted"}
+
