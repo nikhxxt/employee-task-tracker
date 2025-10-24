@@ -1,4 +1,4 @@
-e Task Tracker API
+# 🧑‍💼 Employee Task Tracker API
 
 A modular FastAPI project designed to help organizations manage employees and their assigned tasks efficiently. Built for hands-on learning, this mini project demonstrates real-world backend practices including routing, validation, authentication, and documentation.
 
