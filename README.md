@@ -1,6 +1,7 @@
+````markdown
 # 🧑‍💼 Employee Task Tracker API
 
-A modular FastAPI backend for managing employees and their assigned tasks. This project demonstrates practical backend concepts including API routing, data validation, CRUD operations, header-based authentication, error handling, and automatic API documentation.
+A modular FastAPI backend for managing employees and assigned tasks, with CRUD operations, data validation, token-based access, filtering, error handling, and automatic API documentation.
 
 ---
 
@@ -42,6 +43,7 @@ It demonstrates:
 - Error handling
 - Header-based token authentication
 - Automatic API documentation
+- Cloud deployment with Render
 
 The project uses in-memory data storage and is intended as a backend learning and portfolio project.
 
@@ -53,7 +55,7 @@ The project uses in-memory data storage and is intended as a backend learning an
 - Implement CRUD operations for employees and tasks
 - Validate request data using Pydantic
 - Handle path and query parameters
-- Implement basic authentication using request headers
+- Implement basic token-based authentication
 - Provide structured API responses
 - Document the API using Swagger UI and ReDoc
 - Deploy the application to Render
@@ -97,7 +99,7 @@ x-token: work123
 
 * Swagger UI
 * ReDoc
-* OpenAPI 3 documentation
+* OpenAPI documentation
 * Route grouping and endpoint descriptions
 
 ---
@@ -123,8 +125,6 @@ x-token: work123
 | `GET`    | `/tasks/{task_id}` | Get a task by ID |
 | `PUT`    | `/tasks/{task_id}` | Update a task    |
 | `DELETE` | `/tasks/{task_id}` | Delete a task    |
-
-> Task endpoint names should match the actual routes exposed by the application.
 
 ---
 
@@ -181,20 +181,20 @@ You can use Swagger UI to interact with the API and test the available endpoints
 
 ## 🚀 Getting Started
 
-### Clone the repository
+### Clone the Repository
 
 ```bash
 git clone https://github.com/nikhxxt/employee-task-tracker.git
 cd employee-task-tracker
 ```
 
-### Install dependencies
+### Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### Run locally
+### Run Locally
 
 ```bash
 uvicorn main:app --reload
@@ -242,6 +242,17 @@ curl -X POST http://127.0.0.1:8000/employees/ \
   }'
 ```
 
+The same header can be added to protected requests when using Swagger UI.
+
+---
+
+## ⚠️ Limitations
+
+* Uses in-memory data storage, so data is not persistent across application restarts.
+* Authentication uses a static demonstration token.
+* No database integration is included.
+* No user registration or login system is implemented.
+* This project is intended as a learning and portfolio project rather than a production-ready system.
 
 ---
 
@@ -250,3 +261,7 @@ curl -X POST http://127.0.0.1:8000/employees/ \
 This project is licensed under the **MIT License**.
 
 See the [`LICENSE`](LICENSE) file for details.
+
+```
+```
+
