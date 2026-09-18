@@ -1,6 +1,6 @@
 # 🧑‍💼 Employee Task Tracker API
 
-A modular FastAPI project designed to help organizations manage employees and their assigned tasks efficiently. Built for hands-on learning, this mini project demonstrates real-world backend practices including routing, validation, authentication, and documentation.
+A modular FastAPI backend for managing employees and their assigned tasks. This project demonstrates practical backend concepts including API routing, data validation, CRUD operations, header-based authentication, error handling, and automatic API documentation.
 
 ---
 
@@ -14,83 +14,136 @@ A modular FastAPI project designed to help organizations manage employees and th
 
 ## 📚 Table of Contents
 
-- [📚 Project Description](#project-description)
-- [🎯 Objectives](#objectives)
-- [🔑 Core Features](#core-features)
-- [🛠️ Tech Stack](#tech-stack)
-- [📁 Project Structure](#project-structure)
-- [📡 Live Demo](#live-demo)
-- [🚀 Getting Started](#getting-started)
-- [🔐 Authentication Example](#authentication-example)
-- [📝 License](#license)
+- [📚 Project Description](#-project-description)
+- [🎯 Objectives](#-objectives)
+- [🔑 Features](#-features)
+- [📡 API Endpoints](#-api-endpoints)
+- [🛠️ Tech Stack](#️-tech-stack)
+- [📁 Project Structure](#-project-structure)
+- [🌐 Live Demo](#-live-demo)
+- [🚀 Getting Started](#-getting-started)
+- [🔐 Authentication](#-authentication)
+- [⚠️ Limitations](#️-limitations)
+- [📝 License](#-license)
 
 ---
 
 ## 📚 Project Description
 
-This API simulates a backend system for HR or project managers to:
-- Track employee information
-- Monitor task progress
-- Practice secure, modular API development
+This API provides a simple backend for managing employees and their assigned tasks.
 
-It uses **in-memory data storage** and showcases:
-- Modular structure
-- Input validation
-- Response modeling
-- Token-based authentication
-- Auto-generated documentation
+It demonstrates:
+
+- Modular FastAPI application structure
+- CRUD operations
+- Pydantic-based data validation
+- Request and response schemas
+- Path and query parameters
+- Error handling
+- Header-based token authentication
+- Automatic API documentation
+
+The project uses in-memory data storage and is intended as a backend learning and portfolio project.
 
 ---
 
 ## 🎯 Objectives
 
-- Build a modular FastAPI application with routers, schemas, and dependencies  
-- Implement CRUD operations for employees and tasks  
-- Validate data using Pydantic models  
-- Apply path/query parameters, error handling, and response models  
-- Add API documentation with tags, summaries, and examples  
-- Implement simple token-based authentication  
+- Build a modular FastAPI backend using routers, schemas, and dependencies
+- Implement CRUD operations for employees and tasks
+- Validate request data using Pydantic
+- Handle path and query parameters
+- Implement basic authentication using request headers
+- Provide structured API responses
+- Document the API using Swagger UI and ReDoc
+- Deploy the application to Render
 
 ---
 
-## 🔑 Core Features
+## 🔑 Features
 
 ### 👥 Employee Management
-- Add employees with `name`, `email`, `role`, and `department`
-- View all or specific employee details
-- Update or delete employee records
+
+- Add employees
+- View all employees
+- View an employee by ID
+- Update employee information
+- Delete employees
 
 ### ✅ Task Management
-- Create, update, delete tasks
+
+- Create tasks
 - Assign tasks to employees
-- Filter tasks by `status` or `employee_id`
-- Track progress: `pending`, `in_progress`, `done`
+- View tasks
+- Update tasks
+- Delete tasks
+- Filter tasks by status or employee ID
+- Track task status:
+  - `pending`
+  - `in_progress`
+  - `done`
 
 ### 🔐 Authentication
-- Header-based token validation:  
-  `x-token: work123`
 
-### 📚 Documentation
-- Swagger UI: `/docs`  
-- ReDoc: `/redoc`  
-- Routes grouped with tags, summaries, and examples
+Protected endpoints use a simple header-based token:
+
+```text
+x-token: work123
+````
+
+> `work123` is a demonstration token used for this project and is not intended for production authentication.
+
+### 📚 API Documentation
+
+* Swagger UI
+* ReDoc
+* OpenAPI 3 documentation
+* Route grouping and endpoint descriptions
+
+---
+
+## 📡 API Endpoints
+
+### Employees
+
+| Method   | Endpoint                   | Description           |
+| -------- | -------------------------- | --------------------- |
+| `POST`   | `/employees/`              | Create an employee    |
+| `GET`    | `/employees/`              | Get all employees     |
+| `GET`    | `/employees/{employee_id}` | Get an employee by ID |
+| `PUT`    | `/employees/{employee_id}` | Update an employee    |
+| `DELETE` | `/employees/{employee_id}` | Delete an employee    |
+
+### Tasks
+
+| Method   | Endpoint           | Description      |
+| -------- | ------------------ | ---------------- |
+| `POST`   | `/tasks/`          | Create a task    |
+| `GET`    | `/tasks/`          | Get tasks        |
+| `GET`    | `/tasks/{task_id}` | Get a task by ID |
+| `PUT`    | `/tasks/{task_id}` | Update a task    |
+| `DELETE` | `/tasks/{task_id}` | Delete a task    |
+
+> Task endpoint names should match the actual routes exposed by the application.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **FastAPI** – High-performance Python framework for building APIs  
-- **Pydantic** – Data validation and serialization using Python type hints  
-- **Uvicorn** – ASGI server for running FastAPI apps  
-- **Python 3.10+** – Language runtime with async support  
-- **Swagger UI & ReDoc** – Auto-generated API documentation  
-- **Render** – Cloud platform for deploying web services  
+* **Python 3.10+**
+* **FastAPI**
+* **Pydantic**
+* **Uvicorn**
+* **Swagger UI**
+* **ReDoc**
+* **OpenAPI**
+* **Render**
 
 ---
 
 ## 📁 Project Structure
 
-```
+```text
 employee_task_tracker/
 ├── main.py
 ├── routers/
@@ -108,42 +161,92 @@ employee_task_tracker/
 
 ---
 
-## 📡 Live Demo
+## 🌐 Live Demo
 
-Deployed on Render:  
-🔗 [employee-task-tracker](https://employee-task-tracker-eyac.onrender.com/docs)
+The API is deployed on Render.
 
-> Note: Free Render services may take 30–60 seconds to wake up after inactivity.
+**Swagger Documentation:**
+
+[https://employee-task-tracker-eyac.onrender.com/docs](https://employee-task-tracker-eyac.onrender.com/docs)
+
+**ReDoc:**
+
+[https://employee-task-tracker-eyac.onrender.com/redoc](https://employee-task-tracker-eyac.onrender.com/redoc)
+
+You can use Swagger UI to interact with the API and test the available endpoints.
+
+> Note: Free Render services may take some time to wake up after a period of inactivity.
 
 ---
 
 ## 🚀 Getting Started
 
-### Clone & Run Locally
+### Clone the repository
 
 ```bash
 git clone https://github.com/nikhxxt/employee-task-tracker.git
 cd employee-task-tracker
+```
 
-# Install dependencies
+### Install dependencies
+
+```bash
 pip install -r requirements.txt
+```
 
-# Run the server
+### Run locally
+
+```bash
 uvicorn main:app --reload
+```
+
+The API will be available at:
+
+```text
+http://127.0.0.1:8000
+```
+
+Swagger documentation:
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+ReDoc:
+
+```text
+http://127.0.0.1:8000/redoc
 ```
 
 ---
 
-## 🔐 Authentication Example
+## 🔐 Authentication
 
-Include this header in secured requests:
+Protected endpoints require the following header:
 
-```
+```text
 x-token: work123
 ```
+
+### Example
+
+```bash
+curl -X POST http://127.0.0.1:8000/employees/ \
+  -H "x-token: work123" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Nikhat",
+    "email": "nikhat@example.com",
+    "role": "Backend Developer",
+    "department": "Engineering"
+  }'
+```
+
 
 ---
 
 ## 📝 License
 
-This project is licensed under the **MIT License** — see [`LICENSE`](LICENSE).
+This project is licensed under the **MIT License**.
+
+See the [`LICENSE`](LICENSE) file for details.
