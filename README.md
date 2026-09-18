@@ -23,7 +23,6 @@ A modular FastAPI backend for managing employees and their assigned tasks. This 
 - [🌐 Live Demo](#-live-demo)
 - [🚀 Getting Started](#-getting-started)
 - [🔐 Authentication](#-authentication)
-- [⚠️ Limitations](#️-limitations)
 - [📝 License](#-license)
 
 ---
@@ -241,16 +240,6 @@ curl -X POST http://127.0.0.1:8000/employees/ \
 ```
 
 The same header can be added to protected requests when using Swagger UI.
-
----
-
-## ⚠️ Limitations
-
-- Uses in-memory data storage, so data is not persistent across application restarts.
-- Authentication uses a static demonstration token.
-- No database integration is included.
-- No user registration or login system is implemented.
-- This project is intended as a learning and portfolio project rather than a production-ready system.
 
 ---
 
