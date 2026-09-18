@@ -1,7 +1,6 @@
-````markdown
 # 🧑‍💼 Employee Task Tracker API
 
-A modular FastAPI backend for managing employees and assigned tasks, with CRUD operations, data validation, token-based access, filtering, error handling, and automatic API documentation.
+A modular FastAPI backend for managing employees and their assigned tasks. This project demonstrates practical backend concepts including API routing, data validation, CRUD operations, header-based authentication, error handling, and automatic API documentation.
 
 ---
 
@@ -43,7 +42,6 @@ It demonstrates:
 - Error handling
 - Header-based token authentication
 - Automatic API documentation
-- Cloud deployment with Render
 
 The project uses in-memory data storage and is intended as a backend learning and portfolio project.
 
@@ -55,7 +53,7 @@ The project uses in-memory data storage and is intended as a backend learning an
 - Implement CRUD operations for employees and tasks
 - Validate request data using Pydantic
 - Handle path and query parameters
-- Implement basic token-based authentication
+- Implement basic authentication using request headers
 - Provide structured API responses
 - Document the API using Swagger UI and ReDoc
 - Deploy the application to Render
@@ -91,16 +89,16 @@ Protected endpoints use a simple header-based token:
 
 ```text
 x-token: work123
-````
+```
 
 > `work123` is a demonstration token used for this project and is not intended for production authentication.
 
 ### 📚 API Documentation
 
-* Swagger UI
-* ReDoc
-* OpenAPI documentation
-* Route grouping and endpoint descriptions
+- Swagger UI
+- ReDoc
+- OpenAPI 3 documentation
+- Route grouping and endpoint descriptions
 
 ---
 
@@ -108,36 +106,36 @@ x-token: work123
 
 ### Employees
 
-| Method   | Endpoint                   | Description           |
-| -------- | -------------------------- | --------------------- |
-| `POST`   | `/employees/`              | Create an employee    |
-| `GET`    | `/employees/`              | Get all employees     |
-| `GET`    | `/employees/{employee_id}` | Get an employee by ID |
-| `PUT`    | `/employees/{employee_id}` | Update an employee    |
-| `DELETE` | `/employees/{employee_id}` | Delete an employee    |
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/employees/` | Create an employee |
+| `GET` | `/employees/` | Get all employees |
+| `GET` | `/employees/{employee_id}` | Get an employee by ID |
+| `PUT` | `/employees/{employee_id}` | Update an employee |
+| `DELETE` | `/employees/{employee_id}` | Delete an employee |
 
 ### Tasks
 
-| Method   | Endpoint           | Description      |
-| -------- | ------------------ | ---------------- |
-| `POST`   | `/tasks/`          | Create a task    |
-| `GET`    | `/tasks/`          | Get tasks        |
-| `GET`    | `/tasks/{task_id}` | Get a task by ID |
-| `PUT`    | `/tasks/{task_id}` | Update a task    |
-| `DELETE` | `/tasks/{task_id}` | Delete a task    |
+| Method | Endpoint | Description |
+|---|---|---|
+| `POST` | `/tasks/` | Create a task |
+| `GET` | `/tasks/` | Get tasks |
+| `GET` | `/tasks/{task_id}` | Get a task by ID |
+| `PUT` | `/tasks/{task_id}` | Update a task |
+| `DELETE` | `/tasks/{task_id}` | Delete a task |
 
 ---
 
 ## 🛠️ Tech Stack
 
-* **Python 3.10+**
-* **FastAPI**
-* **Pydantic**
-* **Uvicorn**
-* **Swagger UI**
-* **ReDoc**
-* **OpenAPI**
-* **Render**
+- **Python 3.10+**
+- **FastAPI**
+- **Pydantic**
+- **Uvicorn**
+- **Swagger UI**
+- **ReDoc**
+- **OpenAPI**
+- **Render**
 
 ---
 
@@ -167,11 +165,11 @@ The API is deployed on Render.
 
 **Swagger Documentation:**
 
-[https://employee-task-tracker-eyac.onrender.com/docs](https://employee-task-tracker-eyac.onrender.com/docs)
+https://employee-task-tracker-eyac.onrender.com/docs
 
 **ReDoc:**
 
-[https://employee-task-tracker-eyac.onrender.com/redoc](https://employee-task-tracker-eyac.onrender.com/redoc)
+https://employee-task-tracker-eyac.onrender.com/redoc
 
 You can use Swagger UI to interact with the API and test the available endpoints.
 
@@ -248,11 +246,11 @@ The same header can be added to protected requests when using Swagger UI.
 
 ## ⚠️ Limitations
 
-* Uses in-memory data storage, so data is not persistent across application restarts.
-* Authentication uses a static demonstration token.
-* No database integration is included.
-* No user registration or login system is implemented.
-* This project is intended as a learning and portfolio project rather than a production-ready system.
+- Uses in-memory data storage, so data is not persistent across application restarts.
+- Authentication uses a static demonstration token.
+- No database integration is included.
+- No user registration or login system is implemented.
+- This project is intended as a learning and portfolio project rather than a production-ready system.
 
 ---
 
@@ -262,6 +260,4 @@ This project is licensed under the **MIT License**.
 
 See the [`LICENSE`](LICENSE) file for details.
 
-```
-```
 
